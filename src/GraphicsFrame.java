@@ -58,11 +58,22 @@ public class GraphicsFrame {
 		for(int x = 0; x < m.getWidth(); x++){
 			for(int y = 0; y < m.getHeight(); y++){
 				JPanel temp = new JPanel();
-				temp.setBackground(Color.black);
 				panels[x][y] = temp;
+				
+				// Set enemies to red, terrain to black
+				if(m.getTile(x, y).hasEnemy()){
+					temp.setBackground(Color.red);
+				}
+				else{
+					temp.setBackground(Color.black);
+				}
+				
 				masterPanel.add(temp);
 			}
 		}
+		
+		// Force repaint the window
+		window.setResizable(true);
 		
 		// add masterPanel to window
 		window.add(masterPanel, BorderLayout.CENTER);

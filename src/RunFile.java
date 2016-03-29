@@ -16,5 +16,9 @@ public class RunFile {
 			}
 		}
 		
+		// create graphics
+		GraphicsFrame window = new GraphicsFrame();
+		window.drawMap(grasslands);
+		
 	} // end main
 } // end class

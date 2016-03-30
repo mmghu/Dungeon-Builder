@@ -2,21 +2,21 @@
 public class Tile {
 
 	// member variables
-	private String name;
+	private int id;
 	private Enemy enemy;
 	
 	// constructor
-	public Tile(String n){
-		name = n;
+	public Tile(int i){
+		id = i;
 		enemy = null;
 	}
 	
 	// accessors
-	public String getName(){return name;}
+	public int getId(){return id;}
 	public Enemy getEnemy(){return enemy;}
 	
 	// mutators
-	public void setName(String n){name = n;}
+	public void setId(int i){id = i;}
 	public void setEnemy(Enemy e){enemy = e;}
 	
 	// methods

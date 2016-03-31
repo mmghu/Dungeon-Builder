@@ -1,3 +1,5 @@
+package map;
+import units.Enemy;
 
 public class Tile {
 

@@ -1,3 +1,4 @@
+import graphics.GraphicsFrame;
 import map.Map;
 import map.Tile;
 import units.Enemy;
@@ -5,6 +6,7 @@ import units.Enemy;
 public class RunFile {
 	public static void main(String[] args) {
 		
+		/*
 		// create name and area 2d array
 		String areaName = "Grasslands";
 		int width = 25; int height = 25;
@@ -30,6 +32,9 @@ public class RunFile {
 		
 		Enemy bandit = new Enemy("1", 10, 5, 5, 7);
 		grasslands.getTile(2,2).setEnemy(bandit);
+		*/
+		
+		GraphicsFrame window = new GraphicsFrame();
 		
 	} // end main
 } // end class

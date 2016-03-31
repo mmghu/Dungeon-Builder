@@ -1,6 +1,7 @@
 package graphics;
 
 import java.awt.Dimension;
+import java.awt.GridLayout;
 import java.awt.Toolkit;
 
 import javax.swing.JFrame;
@@ -9,7 +10,7 @@ import javax.swing.JPanel;
 public class GraphicsFrame extends JFrame{
 	
 	// member variables
-	JPanel graphicsPanel;
+	GraphicsPanel masterPanel;
 	private int width, height;
 	
 	// constructor
@@ -25,6 +26,11 @@ public class GraphicsFrame extends JFrame{
 		
 		// remove border
 		setUndecorated(true);
+		
+		// set layout and setup graphics panel
+		setLayout(new GridLayout());
+		masterPanel = new GraphicsPanel();
+		add(masterPanel);
 		
 		// exit on close and visible
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

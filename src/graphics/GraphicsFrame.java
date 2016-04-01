@@ -49,20 +49,14 @@ public class GraphicsFrame extends JFrame{
 	// methods
 	public void loadMenu(){
 		masterPanel.loadMenu();
-		//validate();
-		//repaint();
 	}
 	
 	public void loadBuilder(Map m){
 		masterPanel.loadBuilder(m);
-		//validate();
-		//repaint();
 	}
 	
 	public void loadExplorer(Map m){
 		masterPanel.loadExplorer(m);
-		//validate();
-		//repaint();
 	}
 	
 } // end class

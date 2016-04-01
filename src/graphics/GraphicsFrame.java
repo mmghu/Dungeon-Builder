@@ -1,11 +1,12 @@
 package graphics;
 
 import java.awt.Dimension;
+
 import java.awt.GridLayout;
 import java.awt.Toolkit;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
+import map.Map;
 
 public class GraphicsFrame extends JFrame{
 	
@@ -52,14 +53,14 @@ public class GraphicsFrame extends JFrame{
 		repaint();
 	}
 	
-	public void loadBuilder(){
-		masterPanel.loadBuilder();
+	public void loadBuilder(Map m){
+		masterPanel.loadBuilder(m);
 		validate();
 		repaint();
 	}
 	
-	public void loadExplorer(){
-		masterPanel.loadExplorer();
+	public void loadExplorer(Map m){
+		masterPanel.loadExplorer(m);
 		validate();
 		repaint();
 	}

@@ -1,8 +1,8 @@
 package graphics;
 
 import java.awt.Color;
+import map.Map;
 import java.awt.GridLayout;
-
 import javax.swing.JPanel;
 
 public class GraphicsPanel extends JPanel{
@@ -24,14 +24,14 @@ public class GraphicsPanel extends JPanel{
 		add(menu);
 	}
 	
-	public void loadBuilder(){
-		builder = new MapBuilderPanel();
+	public void loadBuilder(Map m){
+		builder = new MapBuilderPanel(m);
 		removeAll();
 		add(builder);
 	}
 	
-	public void loadExplorer(){
-		explorer = new MapExplorerPanel();
+	public void loadExplorer(Map m){
+		explorer = new MapExplorerPanel(m);
 		removeAll();
 		add(explorer);
 	}

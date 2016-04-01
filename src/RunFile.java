@@ -6,7 +6,6 @@ import units.Enemy;
 public class RunFile {
 	public static void main(String[] args) {
 		
-		/*
 		// create name and area 2d array
 		String areaName = "Grasslands";
 		int width = 25; int height = 25;
@@ -22,23 +21,11 @@ public class RunFile {
 			}
 		}
 		
-		// manually create walls
-		for(int x = 0; x < grasslands.getWidth(); x++){
-			grasslands.setTile(x, 0, new Tile(0));
-			grasslands.setTile(x, width - 1, new Tile(0));
-			grasslands.setTile(height - 1, x, new Tile(0));
-			grasslands.setTile(0, x, new Tile(0));
-		}
-		
-		Enemy bandit = new Enemy("1", 10, 5, 5, 7);
-		grasslands.getTile(2,2).setEnemy(bandit);
-		*/
-		
 		// setup the window
 		GraphicsFrame window = new GraphicsFrame();
 		
 		// load the explorer
-		window.loadExplorer();
+		window.loadExplorer(grasslands);
 		
 	} // end main
 } // end class

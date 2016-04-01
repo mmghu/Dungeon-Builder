@@ -34,7 +34,11 @@ public class RunFile {
 		grasslands.getTile(2,2).setEnemy(bandit);
 		*/
 		
+		// setup the window
 		GraphicsFrame window = new GraphicsFrame();
+		
+		// load the explorer
+		window.loadExplorer();
 		
 	} // end main
 } // end class

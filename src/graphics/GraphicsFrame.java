@@ -22,7 +22,7 @@ public class GraphicsFrame extends JFrame{
 		
 		// setup dimensions
 		setSize(width,height);
-		setResizable(true);
+		setResizable(false);
 		
 		// remove border
 		setUndecorated(true);
@@ -44,5 +44,24 @@ public class GraphicsFrame extends JFrame{
 	// mutators
 	public void setWidth(int w){width = w;}
 	public void setHeight(int h){height = h;}
+	
+	// methods
+	public void loadMenu(){
+		masterPanel.loadMenu();
+		validate();
+		repaint();
+	}
+	
+	public void loadBuilder(){
+		masterPanel.loadBuilder();
+		validate();
+		repaint();
+	}
+	
+	public void loadExplorer(){
+		masterPanel.loadExplorer();
+		validate();
+		repaint();
+	}
 	
 } // end class

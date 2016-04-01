@@ -8,7 +8,7 @@ public class MenuPanel extends JPanel{
 
 	// constructor
 	public MenuPanel(){
-		setBackground(Color.BLUE);
+		setBackground(Color.RED);
 	}
 	
 } // end class

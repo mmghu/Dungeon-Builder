@@ -8,7 +8,7 @@ public class MapExplorerPanel extends JPanel{
 
 	// constructor
 	public MapExplorerPanel(){
-		setBackground(Color.RED);
+		setBackground(Color.BLUE);
 	}
 	
 } // end class

@@ -30,7 +30,7 @@ public class GraphicsFrame extends JFrame{
 		
 		// set layout and setup graphics panel
 		setLayout(new GridLayout());
-		masterPanel = new GraphicsPanel();
+		masterPanel = new GraphicsPanel(this);
 		add(masterPanel);
 		
 		// exit on close and visible
@@ -49,20 +49,20 @@ public class GraphicsFrame extends JFrame{
 	// methods
 	public void loadMenu(){
 		masterPanel.loadMenu();
-		validate();
-		repaint();
+		//validate();
+		//repaint();
 	}
 	
 	public void loadBuilder(Map m){
 		masterPanel.loadBuilder(m);
-		validate();
-		repaint();
+		//validate();
+		//repaint();
 	}
 	
 	public void loadExplorer(Map m){
 		masterPanel.loadExplorer(m);
-		validate();
-		repaint();
+		//validate();
+		//repaint();
 	}
 	
 } // end class

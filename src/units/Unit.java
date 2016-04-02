@@ -15,6 +15,8 @@ public abstract class Unit {
 	protected double attack, defense;
 	protected int movement;
 	
+	protected int currX, currY;
+	
 	// accessors
 	public String getName(){return name;}
 	
@@ -25,6 +27,9 @@ public abstract class Unit {
 	public double getDefense(){return defense;}
 	
 	public int getMovement(){return movement;}
+	
+	public int getCurrX(){return currX;}
+	public int getCurrY(){return currY;}
 	
 	// mutators
 	public void setName(String n){name = n;}
@@ -37,6 +42,9 @@ public abstract class Unit {
 	
 	public void setMovement(int m){movement = m;}
 	
+	public void setCurrX(int x){currX = x;}
+	public void setCurrY(int y){currY = y;}
+	
 	// methods
 	public void desiredColor(Graphics g){
 		g.setColor(Color.GREEN);
@@ -45,6 +53,21 @@ public abstract class Unit {
 	public void drawUnit(Graphics g, int xOrigin, int yOrigin, int xCoord, int yCoord, int mult){
 		desiredColor(g);
 		g.fillRect(xOrigin + (xCoord - 1) * mult + 1, yOrigin + (yCoord - 1) * mult + 1, mult - 1, mult - 1);
+		
+		// update current location
+		currX = (xOrigin + (xCoord - 1) * mult + 1);
+		currY = (yOrigin + (yCoord - 1) * mult + 1);
+	}
+	
+	public void undrawUnit(Graphics g, int xOrigin, int yOrigin, int mult){
+		g.setColor(Color.WHITE);
+		g.fillRect(currX, currY, mult - 1, mult - 1);
+		
+	}
+	
+	public void moveUnit(Graphics g, int xOrigin, int yOrigin, int xCoord, int yCoord, int mult){
+		undrawUnit(g, xOrigin, yOrigin, mult);
+		drawUnit(g, xOrigin, yOrigin, xCoord, yCoord, mult);
 	}
 	
 } // end abstract class

@@ -33,7 +33,6 @@ public class Map {
 	
 	// methods
 	public void drawMap(Graphics g){
-		g.setColor(Color.BLACK);
 		
 		// get dimensions of the screen
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -42,10 +41,16 @@ public class Map {
 		
 		/* temporary - fix later - centers map on the screen */
 		
-		// draw the map
 		int multiplier = 30;
 		int xshift = (width - (getWidth() * multiplier))/2;
 		int yshift = (height - (getHeight() * multiplier))/2;
+		
+		// draw the background
+		g.setColor(Color.WHITE);
+		g.fillRect(xshift, yshift, getWidth() * multiplier, getHeight() * multiplier);
+		
+		// draw the map
+		g.setColor(Color.BLACK);
 		
 		for(int x = xshift; x <= ((getWidth()) * multiplier) + xshift; x += multiplier){
 			g.drawLine(x, yshift, x, (getHeight() * multiplier) + yshift);

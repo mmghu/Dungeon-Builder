@@ -1,5 +1,11 @@
 package units;
 
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.geom.Rectangle2D;
+import java.awt.geom.Rectangle2D.Double;
+
+import com.sun.javafx.geom.Rectangle;
 
 public abstract class Unit {
 	
@@ -30,5 +36,11 @@ public abstract class Unit {
 	public void setDefense(double d){defense = d;}
 	
 	public void setMovement(int m){movement = m;}
+	
+	// methods
+	public void drawUnit(Graphics g, int xOrigin, int yOrigin, int xCoord, int yCoord, int mult){
+		g.setColor(Color.RED);
+		g.fillRect(xOrigin + (xCoord - 1) * mult + 1, yOrigin + (yCoord - 1) * mult + 1, mult - 1, mult - 1);
+	}
 	
 } // end abstract class

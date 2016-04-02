@@ -1,5 +1,6 @@
 package map;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Toolkit;
@@ -31,6 +32,8 @@ public class Map {
 	
 	// methods
 	public void drawMap(Graphics g){
+		g.setColor(Color.BLACK);
+		
 		// get dimensions of the screen
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		int width = (int)screenSize.getWidth();
@@ -38,6 +41,7 @@ public class Map {
 		
 		/* temporary - fix later - centers map on the screen */
 		
+		// draw the map
 		int multiplier = 30;
 		int xshift = (width - (getWidth() * multiplier))/2;
 		int yshift = (height - (getHeight() * multiplier))/2;
@@ -49,6 +53,16 @@ public class Map {
 		for(int y = yshift; y <= ((getHeight()) * multiplier) + yshift; y += multiplier){
 			g.drawLine(xshift, y, (getWidth() * multiplier) + xshift, y);
 		}
+		
+		// draw the units
+		for(int x = 0; x < getWidth() - 1; x++){
+			for(int y = 0; y < getHeight() - 1; y++){
+				if(tiles[x][y].hasEnemy()){
+					tiles[x][y].getEnemy().drawUnit(g, xshift, yshift, x, y, multiplier);
+				}
+			}
+		}
+		
 	}
 	
 } // end class

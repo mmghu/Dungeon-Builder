@@ -19,7 +19,7 @@ public class GraphicsPanel extends JPanel implements Runnable{
 	public GraphicsPanel(GraphicsFrame m){
 		masterFrame = m;
 		setLayout(new GridLayout());
-		
+
 		graphicsThread = new Thread(this, "Graphics Thread");
 		graphicsThread.start();
 	}

@@ -3,10 +3,10 @@ package units;
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class Enemy extends Unit{
+public class Character extends Unit{
 
 	// constructor
-	public Enemy(String n, double hp, double atk, double def, int mov){
+	public Character(String n, double hp, double atk, double def, int mov){
 		super.name = n;
 		super.health = hp;
 		super.maxHealth = hp;
@@ -18,7 +18,7 @@ public class Enemy extends Unit{
 	// methods
 	@Override
 	public void desiredColor(Graphics g){
-		g.setColor(Color.RED);
+		g.setColor(Color.BLUE);
 	}
 	
 } // end class

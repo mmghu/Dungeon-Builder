@@ -2,6 +2,7 @@ import graphics.GraphicsFrame;
 import map.Map;
 import map.Tile;
 import units.Enemy;
+import units.Character;
 
 public class RunFile {
 	public static void main(String[] args) {
@@ -24,6 +25,10 @@ public class RunFile {
 		// create an enemy
 		Enemy bandit = new Enemy("Bandit 1", 10, 5, 5, 7);
 		grasslands.getTile(3, 3).setEnemy(bandit);
+		
+		// create a character
+		Character hero = new Character("Hero 1", 10, 5, 5, 7);
+		grasslands.getTile(9, 9).setCharacter(hero);
 		
 		// setup the window
 		GraphicsFrame window = new GraphicsFrame();

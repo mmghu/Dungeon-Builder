@@ -1,4 +1,4 @@
-package units;
+	package units;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -38,8 +38,12 @@ public abstract class Unit {
 	public void setMovement(int m){movement = m;}
 	
 	// methods
+	public void desiredColor(Graphics g){
+		g.setColor(Color.GREEN);
+	}
+	
 	public void drawUnit(Graphics g, int xOrigin, int yOrigin, int xCoord, int yCoord, int mult){
-		g.setColor(Color.RED);
+		desiredColor(g);
 		g.fillRect(xOrigin + (xCoord - 1) * mult + 1, yOrigin + (yCoord - 1) * mult + 1, mult - 1, mult - 1);
 	}
 	

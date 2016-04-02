@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Toolkit;
+import units.Character;
 
 public class Map {
 
@@ -54,11 +55,20 @@ public class Map {
 			g.drawLine(xshift, y, (getWidth() * multiplier) + xshift, y);
 		}
 		
-		// draw the units
+		// draw the enemies
 		for(int x = 0; x < getWidth() - 1; x++){
 			for(int y = 0; y < getHeight() - 1; y++){
 				if(tiles[x][y].hasEnemy()){
 					tiles[x][y].getEnemy().drawUnit(g, xshift, yshift, x, y, multiplier);
+				}
+			}
+		}
+		
+		// draw the characters
+		for(int x = 0; x < getWidth() - 1; x++){
+			for(int y = 0; y < getHeight() - 1; y++){
+				if(tiles[x][y].hasCharacter()){
+					tiles[x][y].getCharacter().drawUnit(g, xshift, yshift, x, y, multiplier);
 				}
 			}
 		}

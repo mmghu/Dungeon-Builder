@@ -61,8 +61,8 @@ public class Map {
 		}
 		
 		// draw the enemies
-		for(int x = 0; x < getWidth() - 1; x++){
-			for(int y = 0; y < getHeight() - 1; y++){
+		for(int x = 0; x < getWidth(); x++){
+			for(int y = 0; y < getHeight(); y++){
 				if(tiles[x][y].hasEnemy()){
 					tiles[x][y].getEnemy().drawUnit(g, xshift, yshift, x, y, multiplier);
 				}
@@ -70,8 +70,8 @@ public class Map {
 		}
 		
 		// draw the characters
-		for(int x = 0; x < getWidth() - 1; x++){
-			for(int y = 0; y < getHeight() - 1; y++){
+		for(int x = 0; x < getWidth(); x++){
+			for(int y = 0; y < getHeight(); y++){
 				if(tiles[x][y].hasCharacter()){
 					tiles[x][y].getCharacter().drawUnit(g, xshift, yshift, x, y, multiplier);
 				}

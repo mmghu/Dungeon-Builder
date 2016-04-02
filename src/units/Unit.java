@@ -52,11 +52,11 @@ public abstract class Unit {
 	
 	public void drawUnit(Graphics g, int xOrigin, int yOrigin, int xCoord, int yCoord, int mult){
 		desiredColor(g);
-		g.fillRect(xOrigin + (xCoord - 1) * mult + 1, yOrigin + (yCoord - 1) * mult + 1, mult - 1, mult - 1);
+		g.fillRect(xOrigin + (xCoord) * mult + 1, yOrigin + (yCoord) * mult + 1, mult - 1, mult - 1);
 		
 		// update current location
-		currX = (xOrigin + (xCoord - 1) * mult + 1);
-		currY = (yOrigin + (yCoord - 1) * mult + 1);
+		currX = (xOrigin + (xCoord) * mult + 1);
+		currY = (yOrigin + (yCoord) * mult + 1);
 	}
 	
 	public void undrawUnit(Graphics g, int xOrigin, int yOrigin, int mult){

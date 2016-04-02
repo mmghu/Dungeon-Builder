@@ -28,7 +28,7 @@ public class RunFile {
 		
 		// create a character
 		Character hero = new Character("Hero 1", 10, 5, 5, 7);
-		grasslands.getTile(9, 9).setCharacter(hero);
+		grasslands.getTile(24, 24).setCharacter(hero);
 		
 		// setup the window
 		GraphicsFrame window = new GraphicsFrame();

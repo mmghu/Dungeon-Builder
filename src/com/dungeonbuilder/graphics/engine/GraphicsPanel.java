@@ -3,9 +3,9 @@ package com.dungeonbuilder.graphics.engine;
 import java.awt.GridLayout;
 import javax.swing.JPanel;
 
-import com.dungeonbuilder.graphics.screens.MapBuilderPanel;
-import com.dungeonbuilder.graphics.screens.MapExplorerPanel;
-import com.dungeonbuilder.graphics.screens.MenuPanel;
+import com.dungeonbuilder.graphics.MapBuilderPanel;
+import com.dungeonbuilder.graphics.MapExplorerPanel;
+import com.dungeonbuilder.graphics.MenuPanel;
 import com.dungeonbuilder.map.Map;
 
 public class GraphicsPanel extends JPanel implements Runnable{

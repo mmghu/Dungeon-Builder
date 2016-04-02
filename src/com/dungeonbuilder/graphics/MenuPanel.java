@@ -1,4 +1,4 @@
-package com.dungeonbuilder.graphics.screens;
+package com.dungeonbuilder.graphics;
 
 import javax.swing.JPanel;
 

@@ -1,4 +1,4 @@
-package com.dungeonbuilder.graphics;
+package com.dungeonbuilder.graphics.screens;
 
 import java.awt.Graphics;
 
@@ -6,14 +6,14 @@ import javax.swing.JPanel;
 
 import com.dungeonbuilder.map.Map;
 
-public class MapBuilderPanel extends JPanel{
+public class MapExplorerPanel extends JPanel{
 
 	// member variables
-	private static final long serialVersionUID = -1078149554177441434L;
+	private static final long serialVersionUID = -2513127929733972381L;
 	private Map map;
 	
 	// constructor
-	public MapBuilderPanel(Map m){
+	public MapExplorerPanel(Map m){
 		map = m;
 	}
 	

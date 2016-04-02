@@ -1,5 +1,5 @@
 package com.dungeonbuilder.run;
-import com.dungeonbuilder.graphics.GraphicsFrame;
+import com.dungeonbuilder.graphics.engine.GraphicsFrame;
 import com.dungeonbuilder.map.Map;
 import com.dungeonbuilder.map.Tile;
 import com.dungeonbuilder.units.Character;

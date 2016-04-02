@@ -1,10 +1,11 @@
-package map;
+package com.dungeonbuilder.map;
 
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Toolkit;
-import units.Character;
+
+import com.dungeonbuilder.units.Character;
 
 public class Map {
 

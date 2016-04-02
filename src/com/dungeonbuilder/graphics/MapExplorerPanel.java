@@ -1,18 +1,19 @@
-package graphics;
+package com.dungeonbuilder.graphics;
 
 import java.awt.Color;
 import java.awt.Graphics;
 
-import map.Map;
 import javax.swing.JPanel;
 
-public class MapBuilderPanel extends JPanel{
+import com.dungeonbuilder.map.Map;
+
+public class MapExplorerPanel extends JPanel{
 
 	// member variables
 	private Map map;
 	
 	// constructor
-	public MapBuilderPanel(Map m){
+	public MapExplorerPanel(Map m){
 		map = m;
 	}
 	

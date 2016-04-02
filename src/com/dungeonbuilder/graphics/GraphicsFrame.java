@@ -1,4 +1,4 @@
-package graphics;
+package com.dungeonbuilder.graphics;
 
 import java.awt.Dimension;
 
@@ -6,7 +6,8 @@ import java.awt.GridLayout;
 import java.awt.Toolkit;
 
 import javax.swing.JFrame;
-import map.Map;
+
+import com.dungeonbuilder.map.Map;
 
 public class GraphicsFrame extends JFrame{
 	

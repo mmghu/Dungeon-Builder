@@ -1,8 +1,9 @@
-import graphics.GraphicsFrame;
-import map.Map;
-import map.Tile;
-import units.Enemy;
-import units.Character;
+package com.dungeonbuilder.run;
+import com.dungeonbuilder.graphics.GraphicsFrame;
+import com.dungeonbuilder.map.Map;
+import com.dungeonbuilder.map.Tile;
+import com.dungeonbuilder.units.Character;
+import com.dungeonbuilder.units.Enemy;
 
 public class RunFile {
 	public static void main(String[] args) {
@@ -24,7 +25,7 @@ public class RunFile {
 		
 		// create an enemy
 		Enemy bandit = new Enemy("Bandit 1", 10, 5, 5, 7);
-		grasslands.getTile(3, 3).setEnemy(bandit);
+		grasslands.getTile(0, 0).setEnemy(bandit);
 		
 		// create a character
 		Character hero = new Character("Hero 1", 10, 5, 5, 7);

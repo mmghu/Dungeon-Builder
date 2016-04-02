@@ -1,4 +1,4 @@
-package graphics;
+package com.dungeonbuilder.graphics;
 
 import java.awt.Color;
 

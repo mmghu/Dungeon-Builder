@@ -1,6 +1,6 @@
-package map;
-import units.Enemy;
-import units.Character;
+package com.dungeonbuilder.map;
+import com.dungeonbuilder.units.Character;
+import com.dungeonbuilder.units.Enemy;
 
 public class Tile {
 

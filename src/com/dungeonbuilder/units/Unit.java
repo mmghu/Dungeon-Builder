@@ -1,4 +1,4 @@
-	package units;
+	package com.dungeonbuilder.units;
 
 import java.awt.Color;
 import java.awt.Graphics;

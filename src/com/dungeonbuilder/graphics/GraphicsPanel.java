@@ -1,9 +1,10 @@
-package graphics;
+package com.dungeonbuilder.graphics;
 
 import java.awt.Color;
-import map.Map;
 import java.awt.GridLayout;
 import javax.swing.JPanel;
+
+import com.dungeonbuilder.map.Map;
 
 public class GraphicsPanel extends JPanel implements Runnable{
 

@@ -1,6 +1,5 @@
 package com.dungeonbuilder.graphics;
 
-import java.awt.Color;
 import java.awt.GridLayout;
 import javax.swing.JPanel;
 
@@ -9,6 +8,7 @@ import com.dungeonbuilder.map.Map;
 public class GraphicsPanel extends JPanel implements Runnable{
 
 	// member variables
+	private static final long serialVersionUID = -5818196426488742698L;
 	private GraphicsFrame masterFrame;
 	private MenuPanel menu;
 	private MapExplorerPanel explorer;

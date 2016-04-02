@@ -1,11 +1,7 @@
-	package com.dungeonbuilder.units;
+package com.dungeonbuilder.units;
 
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.geom.Rectangle2D;
-import java.awt.geom.Rectangle2D.Double;
-
-import com.sun.javafx.geom.Rectangle;
 
 public abstract class Unit {
 	

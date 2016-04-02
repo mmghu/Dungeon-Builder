@@ -12,6 +12,7 @@ import com.dungeonbuilder.map.Map;
 public class GraphicsFrame extends JFrame{
 	
 	// member variables
+	private static final long serialVersionUID = -999596068245902982L;
 	GraphicsPanel masterPanel;
 	private int width, height;
 	

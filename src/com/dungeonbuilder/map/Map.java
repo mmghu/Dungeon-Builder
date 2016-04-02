@@ -5,8 +5,6 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Toolkit;
 
-import com.dungeonbuilder.units.Character;
-
 public class Map {
 
 	// member variables

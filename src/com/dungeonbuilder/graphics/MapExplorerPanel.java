@@ -15,9 +15,6 @@ public class MapExplorerPanel extends JPanel implements MouseListener{
 	private static final long serialVersionUID = -2513127929733972381L;
 	private Map map;
 	
-	private boolean clicked;
-	private Character clickedCharacter;
-	
 	// constructor
 	public MapExplorerPanel(Map m){
 		map = m;
@@ -29,12 +26,6 @@ public class MapExplorerPanel extends JPanel implements MouseListener{
 	public void paint(Graphics g){
 		map.drawMap(g);
 		map.drawUnits(g);
-		
-		for(int i = 0; i < map.getCharacters().size(); i++){
-			if(map.getCharacters().get(i).isUpdated()){
-				map.getCharacters().get(i).moveUnit(g, map.getxOrigin(), map.getyOrigin(), map.getCharacters().get(i).getNextX(), map.getCharacters().get(i).getNextY(), map.getMultiplier(), map);
-			}
-		}
 	}
 
 	@Override
@@ -42,24 +33,6 @@ public class MapExplorerPanel extends JPanel implements MouseListener{
 		// convert click to coorindate
 		int xCoord = map.getCoordinate(e.getX(), true);
 		int yCoord = map.getCoordinate(e.getY(), false);
-		
-		if(!clicked){
-			if(map.getTile(xCoord, yCoord).hasCharacter()){
-				clicked = true;
-				clickedCharacter = map.getTile(xCoord, yCoord).getCharacter();
-				System.out.println("clicked character");
-			}
-		}
-		if(clicked){
-			if(!map.getTile(xCoord, yCoord).hasEnemy() && !map.getTile(xCoord, yCoord).hasCharacter()){
-				clickedCharacter.setUpdated(true);
-				clickedCharacter.setNextX(xCoord);
-				clickedCharacter.setNextY(yCoord);
-				
-				clicked = false;
-				System.out.println("moved character");
-			}
-		}
 	}
 
 	@Override
